@@ -1,0 +1,39 @@
+// HOME
+section.home.section#home
+
+  // HOME CONTAINER
+  .home__container.container.grid
+
+    // HOME DATA
+    .home__data
+      h1.home__title
+        |Discover
+        br
+        |Most Suitable
+        br
+        |Property
+
+      p.home__description.
+        Find a variety of properties that suit you very easily, forget all difficulties in finding a residence for you
+
+      // HOME SEARCH
+      form.home__search(action="#")
+        i.bx.bxs-map
+        input.home__search-input(type="search" placeholder="Search by location")
+        button.button Search
+
+      // HOME VALUE
+      .home__value
+        each value in valueData 
+          div
+            h2.home__value-number
+              | #{value.title} 
+              span +
+            span.home__value-description !{value.descr}
+
+    // HOME IMAGES
+    .home__images
+      .home__orbe
+
+      .home__img
+        img(src="@img/home.jpg", alt="home image")
