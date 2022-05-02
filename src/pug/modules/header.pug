@@ -1,2 +1,19 @@
 // HEADER
-header.header
+header.header#header
+
+  // NAV CONTAINER
+  nav.nav.container
+    a.nav__logo(href="#")
+      |Holux
+      i.bx.bxs-home-alt-2
+
+    // NAV MENU
+    .nav__menu
+      ul.nav__list
+        each link in navLinks
+          li.nav__item
+            a.nav__link(href=`#${link.ref}`)
+              i(class=`${link.icon}`)
+              span= link.label
+
+    a.button.nav__button(href="#") Subscribe
