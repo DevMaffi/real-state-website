@@ -1,6 +1,10 @@
 // Modules
 
+// vars
 @use 'vars'
+
+// plugins
+@use '../plugins/plugins-dir' as plugins
 
 /* BASE STYLES
 
@@ -11,5 +15,32 @@
   padding: 0
   margin: 0
 
+html
+  scroll-behavior: smooth
+
 body
-  font-family: vars.$font-family
+  background-color: var(--body-color)
+  font:
+    family: vars.$font-family
+    size: var(--normal-font-size)
+  color: var(--text-color)
+
+h1, h2, h3
+  font-size: var(--font-semi-bold)
+  color: var(--title-color)
+
+ul
+  list-style: none
+
+a
+  text-decoration: none
+
+img
+  max-width: 100%
+  height: auto
+
+#{plugins.$all-buttons},
+#{plugins.$all-text-inputs}
+  border: none
+  outline: none
+  font-family: var(--body-font)
