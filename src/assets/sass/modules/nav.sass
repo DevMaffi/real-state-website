@@ -1,1 +1,61 @@
+// Modules
+
+// plugins
+@use '../plugins/plugins-dir' as plugins
+
+// media lib
+@use '../base/media-lib'
+
 /* NAV
+
+.nav
+  display: flex
+  height: var(--header-height)
+  justify-content: space-between
+  align-items: center
+
+.nav__logo
+  display: inline-flex
+  align-items: center
+  column-gap: .25rem
+  font-weight: var(--font-medium)
+  /* color: hsl(0, 0%, 100%)
+  transition: .3s
+
+  &:hover
+    color: var(--first-color)
+
+.nav__logo i
+  font-size: 1rem
+
+.nav__menu
+  +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
+    width: 90%
+    margin: 0 auto
+    padding: 1.3rem 3rem
+    background-color: var(--container-color)
+    border-radius: 1.25rem
+    box-shadow: 0px 8px 24px hsla(228, 66%, 45%, .15)
+    +plugins.position(fixed, null 0 2rem 0)
+    transition: .4s
+
+.nav__list
+  +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.nav__link
+  +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
+    display: flex
+    padding: .5rem
+    border-radius: 50%
+    color: var(--text-color)
+
+.nav__link i
+  +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
+    font-size: 1.25rem
+
+.nav__link span
+  +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
+    display: none
