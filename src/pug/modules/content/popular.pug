@@ -9,12 +9,12 @@ section.popular.section#popular
       span .
 
     // POPULAR CONTAINER
-    .popular__container 
-      div
+    .popular__container.swiper 
+      .swiper-wrapper
 
         each card in popularCards
           // POPULAR CARD
-          article.popular__card
+          article.popular__card.swiper-slide
             img.popular__img(src=`@img/${card.img}`, alt="popular")
 
             // POPULAR DATA
@@ -23,3 +23,10 @@ section.popular.section#popular
               h3.popular__title= card.title
 
               p.popular__description= card.descr
+
+      // SWIPER NAVIGATION
+      .swiper-button-prev
+        i.bx.bx-chevron-left
+
+      .swiper-button-next
+        i.bx.bx-chevron-right
