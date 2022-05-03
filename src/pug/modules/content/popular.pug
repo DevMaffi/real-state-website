@@ -1,0 +1,25 @@
+// POPULAR
+section.popular.section#popular 
+
+  // CONTAINER
+  .container
+    span.section__subtitle Best Choice
+    h2.section__title
+      |Popular Residences
+      span .
+
+    // POPULAR CONTAINER
+    .popular__container 
+      div
+
+        each card in popularCards
+          // POPULAR CARD
+          article.popular__card
+            img.popular__img(src=`@img/${card.img}`, alt="popular")
+
+            // POPULAR DATA
+            .popular__data
+              h2.popular__price !{card.price}
+              h3.popular__title= card.title
+
+              p.popular__description= card.descr
