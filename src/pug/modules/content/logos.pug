@@ -1,0 +1,8 @@
+// LOGOS
+section.logos.section
+
+  // LOGOS CONTAINER
+  .logos__container.container.grid
+    each logo in logos
+      .logos__img
+        img(src=`@img/${logo}`, alt="logo")
