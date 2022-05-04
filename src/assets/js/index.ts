@@ -4,9 +4,8 @@
 import Swiper, { Navigation } from 'swiper'
 
 // @ts-ignore
-import { handleScroll } from '@modules'
+import { handleScroll, handleAccordion } from '@modules'
 
-// styles
 // styles
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -15,6 +14,12 @@ import '@sass/styles.sass'
 // Setup handlers
 
 handleScroll()
+
+try {
+  handleAccordion()
+} catch (error: Error | any) {
+  console.error(error.message)
+}
 
 // Define swiper
 
