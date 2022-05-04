@@ -1,5 +1,8 @@
 // Modules
 
+// placeholders
+@use '../base/placeholders'
+
 // plugins
 @use '../plugins/plugins-dir' as plugins
 
@@ -15,12 +18,11 @@
   align-items: center
 
 .nav__logo
-  display: inline-flex
-  align-items: center
-  column-gap: .25rem
   font-weight: var(--font-medium)
   color: hsl(0, 0%, 100%)
   transition: .3s
+
+  @extend %logo
 
   &:hover
     color: var(--first-color)
