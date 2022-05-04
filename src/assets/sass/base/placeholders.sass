@@ -1,1 +1,21 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
 // Placeholders
+
+%orbe
+  +plugins.size(266px, 316px)
+  background-color: hsl(228, 24%, 97%)
+  +plugins.border-top-radius(135px)
+  +plugins.border-bottom-radius(16px)
+
+%orbe-img
+  +plugins.size(250px, 300px)
+  margin: auto
+  +plugins.border-top-radius(125px)
+  +plugins.border-bottom-radius(12px)
+  box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25)
+  position: absolute
+  inset: 0
+  overflow: hidden
