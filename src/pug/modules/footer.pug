@@ -1,2 +1,44 @@
 // FOOTER
-footer.footer
+footer.footer.section
+
+  // FOOTER CONTAINER
+  .footer__container.container.grid
+    div
+      a.footer__logo(href="#") 
+        +logo
+
+      p.footer__description 
+        |Our vision is to make all people 
+        br 
+        |the best place to live for them.
+
+    // FOOTER CONTENT
+    .footer__content
+
+      each section in footerSections
+        div
+          h3.footer__title= section.title
+
+          if section.links
+            // FOOTER LINKS
+            ul.footer__links
+              each link in section.links
+                li 
+                  a.footer__link(href="#")= link
+
+          if section.social
+            // FOOTER SOCIAL
+            ul.footer__links
+              each link in section.social
+                li 
+                  a.footer__social-link(href=`${link.ref}` target="_blank")
+                    i(class=`${link.icon}`)
+
+  // FOOTER INFO
+  .footer__info.container
+    span.footer__copy
+      |&#169; #{new Date().getFullYear()} #{companyName}. All rights reserved
+
+    .footer__privacy 
+      each item in privacy
+        a(href="#")= item 
