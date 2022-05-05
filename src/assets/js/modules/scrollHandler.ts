@@ -1,3 +1,7 @@
+// Define variables
+
+const exceptionType = 'HTML Structure'
+
 // Change background header
 
 function scrollHeader(): void {
@@ -9,10 +13,68 @@ function scrollHeader(): void {
   return header?.classList.remove('scroll-header')
 }
 
+// Handle window location
+
+function handleLocation(hash: string): void {
+  if (window.location.hash === hash) return
+
+  if (history.pushState) return history.pushState(null, '', hash)
+
+  window.location.hash = hash
+}
+
+// Handle scroll sections active link
+
+const anchors: { [id: string]: HTMLAnchorElement | null } = {}
+
+function handleActiveLink(section: HTMLElement, scrollY: number): void {
+  const sectionHeight: number = section.offsetHeight
+  const sectionTop: number = section.offsetTop - 58
+  const sectionId: string = section.getAttribute('id')!
+  let sectionLink: HTMLAnchorElement | null
+
+  if (anchors[sectionId]) sectionLink = anchors[sectionId]
+  else
+    anchors[sectionId] = sectionLink = document.querySelector(
+      `.nav__menu a[href*=${sectionId}]`
+    )
+
+  if (!sectionLink)
+    throw new Error(
+      `[${exceptionType}]: nav menu should contain anchor with #${sectionId} href`
+    )
+
+  // when the scroll is within the section, add the active-link class to the corresponding nav link in the nav menu and handle location, otherwise, remove it
+  if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+    handleLocation(`#${sectionId}`)
+    return sectionLink.classList.add('active-link')
+  }
+
+  sectionLink.classList.remove('active-link')
+}
+
+// Apply handler for each nav menu link
+
+const sections: NodeListOf<HTMLElement> | null =
+  document.querySelectorAll('section[id]')
+
+function scrollActive() {
+  const scrollY: number = window.pageYOffset
+
+  sections?.forEach(section => {
+    try {
+      handleActiveLink(section, scrollY)
+    } catch (error: any) {
+      console.error(error.message)
+    }
+  })
+}
+
 // Add event handlers on window
 
 function handleScroll(): void {
   window.addEventListener('scroll', scrollHeader)
+  window.addEventListener('scroll', scrollActive)
 }
 
 // Exports

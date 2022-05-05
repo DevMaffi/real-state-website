@@ -3,15 +3,15 @@ header.header#header
 
   // NAV CONTAINER
   nav.nav.container
-    a.nav__logo(href="#")
+    a.nav__logo(href="#home")
       +logo
 
     // NAV MENU
     .nav__menu
       ul.nav__list
-        each link in navLinks
+        each link, i in navLinks
           li.nav__item
-            a.nav__link(href=`#${link.ref}`)
+            a(class=`nav__link ${i === 0 ? 'active-link' : null}` href=`#${link.ref}`)
               i(class=`${link.icon}`)
               span= link.label
 
