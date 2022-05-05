@@ -13,6 +13,18 @@ function scrollHeader(): void {
   return header?.classList.remove('scroll-header')
 }
 
+// Handle scroll-up module representation
+
+function showScrollUp() {
+  const scrollUp: HTMLAnchorElement | null =
+    document.querySelector('#scroll-up')
+
+  // when the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scroll-top class
+  if (window.scrollY >= 350) return scrollUp?.classList.add('show-scroll')
+
+  scrollUp?.classList.remove('show-scroll')
+}
+
 // Handle window location
 
 function handleLocation(hash: string): void {
@@ -74,6 +86,7 @@ function scrollActive() {
 
 function handleScroll(): void {
   window.addEventListener('scroll', scrollHeader)
+  window.addEventListener('scroll', showScrollUp)
   window.addEventListener('scroll', scrollActive)
 }
 

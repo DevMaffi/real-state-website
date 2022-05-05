@@ -9,6 +9,18 @@
 .scroll-header .nav__logo
   color: var(--first-color)
 
+// Handle scroll-up module display
+
+.show-scroll
+  bottom: 8rem
+
+// Handle active link styles
+
+.active-link
+  background: linear-gradient(101deg, hsl(228, 66%, 53%), hsl(228, 66%, 47%))
+  box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25)
+  color: hsl(0, 0%, 100%)
+
 // Handle active accordion item styles
 
 .accordion-open
@@ -22,10 +34,3 @@
 
 .accordion-open .value__accordion-arrow i
   transform: rotate(-180deg)
-
-// Active link
-
-.active-link
-  background: linear-gradient(101deg, hsl(228, 66%, 53%), hsl(228, 66%, 47%))
-  box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25)
-  color: hsl(0, 0%, 100%)
