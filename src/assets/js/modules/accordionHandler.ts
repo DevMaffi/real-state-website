@@ -53,7 +53,7 @@ function handleAccordion(): void {
         if (openItem && openItem !== item) toggleItem(openItem)
 
         toggleItem(item)
-      } catch (error: Error | any) {
+      } catch (error: any) {
         console.error(error.message)
       }
     })
