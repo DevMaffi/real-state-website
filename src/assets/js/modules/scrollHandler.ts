@@ -5,7 +5,7 @@ const exceptionType = 'HTML Structure'
 // Change background header
 
 function scrollHeader(): void {
-  const header: HTMLDivElement = document.querySelector('#header')!
+  const header = document.querySelector('#header')! as HTMLDivElement
 
   // when the scroll is greater than 50 viewport height, add the scroll-header class to the header element
   if (window.scrollY >= 50) return header?.classList.add('scroll-header')
@@ -16,8 +16,9 @@ function scrollHeader(): void {
 // Handle scroll-up module representation
 
 function showScrollUp() {
-  const scrollUp: HTMLAnchorElement | null =
-    document.querySelector('#scroll-up')
+  const scrollUp = document.querySelector(
+    '#scroll-up'
+  ) as HTMLAnchorElement | null
 
   // when the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scroll-top class
   if (window.scrollY >= 350) return scrollUp?.classList.add('show-scroll')
@@ -67,8 +68,9 @@ function handleActiveLink(section: HTMLElement, scrollY: number): void {
 
 // Apply handler for each nav menu link
 
-const sections: NodeListOf<HTMLElement> | null =
-  document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll(
+  'section[id]'
+) as NodeListOf<HTMLElement> | null
 
 function scrollActive() {
   const scrollY: number = window.pageYOffset
