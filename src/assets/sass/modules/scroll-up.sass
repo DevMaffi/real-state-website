@@ -1,0 +1,21 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
+/* SCROLL UP
+
+.scroll-up
+  display: inline-flex
+  padding: .35rem
+  background-color: var(--container-color)
+  border-radius: .25rem
+  box-shadow: 0 8px 12px hsla(228, 66%, 45%, .1)
+  font-size: 1.25rem
+  color: var(--title-color)
+  +plugins.position(fixed, null 1rem 8rem null)
+  z-index: var(--z-tooltip)
+  transition: .3s
+
+  &:hover
+    color: var(--first-color)
+    transform: translateY(-.25rem)
