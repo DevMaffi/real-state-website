@@ -16,6 +16,11 @@
     grid-template-columns: repeat(2, 1fr)
     align-items: center
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    align-items: flex-start
+    column-gap: 5rem
+
 .contact__images
   display: flex
   justify-content: center
@@ -34,6 +39,10 @@
 .contact__description
   margin-bottom: 2.5rem
   font-size: var(--small-font-size)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    font-size: var(--normal-font-size)
 
 .contact__card
   display: grid
@@ -54,6 +63,10 @@
   +media-lib.breakpoint($br: media-lib.$md)
     justify-content: initial
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    grid-template-columns: repeat(2, 200px)
+
 .contact__card-box
   padding: 1.25rem .75rem
   background-color: var(--body-color)
@@ -63,6 +76,10 @@
 
   &:hover
     box-shadow: 0 8px 24px hsla(228, 66%, 45%, .1)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    padding: 28px 1.5rem 1.5rem
 
 .contact__card-info
   display: flex

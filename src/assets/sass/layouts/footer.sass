@@ -50,12 +50,24 @@
   +media-lib.breakpoint($br: media-lib.$sm)
     grid-template-columns: repeat(3, max-content)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    grid-template-columns: repeat(4, max-content)
+
 .footer__title
   margin-bottom: 1rem
   font-size: var(--h3-font-size)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    margin-bottom: 1.5rem
+
 .footer__links
   row-gap: .5rem
+  
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    row-gap: 1rem
 
 .footer__link,
 .footer__social-link
@@ -82,6 +94,12 @@
   padding-top: 5.5rem
   padding-bottom: 6rem
   text-align: center
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    flex-direction: row
+    justify-content: space-between
+    padding-bottom: 2rem
 
 .footer__copy,
 .footer__privacy a 

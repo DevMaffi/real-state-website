@@ -1,3 +1,7 @@
+// Modules
+
+@use '../base/media-lib'
+
 /* CHANGE THEME
 
 .change__theme
@@ -8,3 +12,8 @@
 
   &:hover
     color: var(--first-color)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    margin: 0 3rem
+    color: var(--text-color-light)

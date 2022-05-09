@@ -22,15 +22,31 @@
   +media-lib.breakpoint($br: media-lib.$md)
     padding: 3rem 13rem
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    padding: 4rem 10rem 4.5rem
+    border: 12px solid var(--first-color-light)
+      radius: 2rem
+
 .subscribe__title
   margin-bottom: 1rem
   font-size: var(--h2-font-size)
   color: hsl(0, 0%, 100%)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    margin-bottom: 1.5rem
+    font-size: 2.5rem
+
 .subscribe__description
   margin-bottom: 2rem
   font-size: var(--small-font-size)
   color: hsl(228, 90%, 92%)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    padding: 0 8rem 
+    font-size: var(--normal-font-size)
 
 .subscribe__button
   background: var(--first-color-light)
@@ -39,3 +55,7 @@
 
   &:hover
     background: var(--first-color)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    font-size: var(--normal-font-size)

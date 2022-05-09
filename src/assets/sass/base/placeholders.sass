@@ -23,6 +23,11 @@
   +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
     +plugins.size(236px, 280px)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    +plugins.size(501px, 641px)
+    +plugins.border-top-radius(258px)
+
 %orbe-img
   +plugins.size(250px, 300px)
   margin: auto
@@ -36,3 +41,12 @@
   // small devices
   +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
     +plugins.size(220px, 260px)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    +plugins.size(461px, 601px)
+    +plugins.border-top-radius(238px)
+
+%orbe-img img
+  max-width: initial
+  width: 490px

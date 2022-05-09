@@ -17,6 +17,10 @@
   justify-content: space-between
   align-items: center
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    height: calc(var(--header-height) + 1.5rem)
+
 .nav__logo
   font-weight: var(--font-medium)
   color: hsl(0, 0%, 100%)
@@ -31,6 +35,8 @@
   font-size: 1rem
 
 .nav__menu
+  // Desktop first
+
   // large devices
   +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
     width: 90%
@@ -43,18 +49,30 @@
     transition: .4s
 
   // small devices
+  +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
+    padding: 1.3rem 1.5rem
+
+  // Mobile first
+
+  // small devices
   +media-lib.breakpoint($br: media-lib.$sm)
     width: 342px
 
-  // small devices
-  +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
-    padding: 1.3rem 1.5rem
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    width: initial
+    margin-left: auto
 
 .nav__list
   +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
     display: flex
     justify-content: space-between
     align-items: center
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    display: flex
+    column-gap: 3rem
 
 .nav__link
   +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
@@ -63,9 +81,17 @@
     border-radius: 50%
     color: var(--text-color)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    color: var(--text-color-light)
+
 .nav__link i
   +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
     font-size: 1.25rem
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    display: none
 
 .nav__link span
   +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
@@ -73,3 +99,7 @@
 
 .nav__button
   display: none
+  
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    display: inline-block

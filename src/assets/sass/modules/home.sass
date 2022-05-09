@@ -16,6 +16,10 @@
   +media-lib.breakpoint($br: media-lib.$xs, $media-feature: 'max-width')
     padding-bottom: 0
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    padding-bottom: 0
+
 .home__container
   padding-top: 4rem
   row-gap: 3.5rem
@@ -25,10 +29,19 @@
     grid-template-columns: repeat(2, 1fr)
     padding-top: 2rem
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    column-gap: 2rem
+    padding-top: 5rem
+
 .home__data
   // medium devices
   +media-lib.breakpoint($br: media-lib.$md)
     padding-bottom: 2rem
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    padding-bottom: 4rem
 
 .home__title,
 .home__value-number
@@ -39,9 +52,17 @@
   font-size: var(--biggest-font-size)
   line-height: 120%
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    margin-bottom: 2rem
+
 .home__description
   margin-bottom: 2rem
   color: var(--text-color-light)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    margin-bottom: 3rem
 
 .home__search
   display: flex
@@ -55,6 +76,10 @@
   // small devices
   +media-lib.breakpoint($br: media-lib.$sm)
     width: 412px
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    margin-bottom: 3rem
 
 .home__search i
   font-size: 1.25rem
@@ -76,6 +101,10 @@
   // small devices
   +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
     column-gap: 1rem
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    column-gap: 3.5rem
 
 .home__value-number
   margin-bottom: .25rem
@@ -108,6 +137,11 @@
   +media-lib.breakpoint($br: media-lib.$md)
     align-self: flex-end
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    +plugins.size(504px, 611px)
+    +plugins.border-top-radius(256px)
+
 .home__img
   display: inline-flex
   align-items: flex-end
@@ -121,3 +155,10 @@
   // small devices
   +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
     +plugins.size(220px, 280px)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    +plugins.size(472px, 634px)
+    +plugins.border-top-radius(236px)
+    +plugins.border-bottom-radius(12px)
+    bottom: -2.5rem
