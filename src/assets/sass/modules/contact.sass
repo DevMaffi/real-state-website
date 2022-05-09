@@ -36,6 +36,11 @@
     grid-template-columns: repeat(1, 180px)
     justify-content: center
 
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    grid-template-columns: repeat(2, 192px)
+    justify-content: center
+
 .contact__card-box
   padding: 1.25rem .75rem
   background-color: var(--body-color)

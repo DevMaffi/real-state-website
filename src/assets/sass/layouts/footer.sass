@@ -41,6 +41,10 @@
   +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
     gap: 2.5rem
 
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    grid-template-columns: repeat(3, max-content)
+
 .footer__title
   margin-bottom: 1rem
   font-size: var(--h3-font-size)
