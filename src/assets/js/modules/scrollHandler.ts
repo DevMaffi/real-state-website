@@ -8,14 +8,14 @@ function scrollHeader(): void {
   const header = document.querySelector('#header')! as HTMLDivElement
 
   // when the scroll is greater than 50 viewport height, add the scroll-header class to the header element
-  if (window.scrollY >= 50) return header?.classList.add('scroll-header')
+  if (window.scrollY >= 50) return header.classList.add('scroll-header')
 
-  return header?.classList.remove('scroll-header')
+  return header.classList.remove('scroll-header')
 }
 
 // Handle scroll-up module representation
 
-function showScrollUp() {
+function showScrollUp(): void {
   const scrollUp = document.querySelector(
     '#scroll-up'
   ) as HTMLAnchorElement | null
