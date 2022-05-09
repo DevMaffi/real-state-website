@@ -1,6 +1,10 @@
 // Modules
 
+// plugins
 @use '../plugins/plugins-dir' as plugins
+
+// media lib
+@use 'media-lib'
 
 // Placeholders
 
@@ -15,6 +19,10 @@
   +plugins.border-top-radius(135px)
   +plugins.border-bottom-radius(16px)
 
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
+    +plugins.size(236px, 280px)
+
 %orbe-img
   +plugins.size(250px, 300px)
   margin: auto
@@ -24,3 +32,7 @@
   position: absolute
   inset: 0
   overflow: hidden
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
+    +plugins.size(220px, 260px)

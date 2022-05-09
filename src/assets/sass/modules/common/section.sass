@@ -1,7 +1,15 @@
+// Modules
+
+@use '../../base/media-lib'
+
 /* SECTION
 
 .section
   padding: 4.5rem 0 2rem
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xs, $media-feature: 'max-width')
+    padding: 3.5rem 0 1rem
 
 .section__title
   font-size: var(--h2-font-size)

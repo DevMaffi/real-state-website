@@ -1,3 +1,7 @@
+// Modules
+
+@use '../base/media-lib'
+
 /* SUBSCRIBE
 
 .subscribe
@@ -9,6 +13,10 @@
   border: 6px solid var(--first-color-light)
     radius: 1.25rem
   text-align: center
+  
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
+    padding: 2rem 1rem
 
 .subscribe__title
   margin-bottom: 1rem

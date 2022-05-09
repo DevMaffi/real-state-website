@@ -1,6 +1,10 @@
 // Modules
 
+// placeholders
 @use '../base/placeholders'
+
+// media lib
+@use '../base/media-lib'
 
 /* CONTACT
 
@@ -26,6 +30,11 @@
   display: grid
   grid-template-columns: repeat(2, 1fr)
   gap: 1.25rem .75rem
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xs, $media-feature: 'max-width')
+    grid-template-columns: repeat(1, 180px)
+    justify-content: center
 
 .contact__card-box
   padding: 1.25rem .75rem

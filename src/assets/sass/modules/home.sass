@@ -1,12 +1,20 @@
 // Modules
 
+// plugins
 @use '../plugins/plugins-dir' as plugins
+
+// media lib
+@use '../base/media-lib'
 
 /* HOME
 
 .home
   padding-bottom: 0
   background: linear-gradient(170deg, hsl(0, 0%, 22%) 0%, hsl(0, 0%, 6%) 30%)
+  
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xs, $media-feature: 'max-width')
+    padding-bottom: 0
 
 .home__container
   padding-top: 4rem
@@ -51,6 +59,10 @@
   display: flex
   column-gap: 2.5rem
 
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
+    column-gap: 1rem
+
 .home__value-number
   margin-bottom: .25rem
   font-size: var(--h1-font-size)
@@ -74,6 +86,10 @@
   background: linear-gradient(180deg, hsl(0, 0%, 16%) 93%, hsl(0, 0%, 67%) 100%)
   +plugins.border-top-radius(135px)
 
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
+    +plugins.size(240px, 264px)
+
 .home__img
   display: inline-flex
   align-items: flex-end
@@ -83,3 +99,7 @@
   box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25)
   +plugins.position(absolute, null null -1.5rem)
   overflow: hidden
+  
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
+    +plugins.size(220px, 280px)

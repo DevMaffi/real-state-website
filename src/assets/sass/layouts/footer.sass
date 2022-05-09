@@ -1,6 +1,10 @@
 // Modules
 
+// placeholders
 @use '../base/placeholders'
+
+// media lib
+@use '../base/media-lib'
 
 /* FOOTER
 
@@ -32,6 +36,10 @@
 .footer__content
   grid-template-columns: repeat(2, max-content)
   gap: 2.5rem 4rem
+  
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
+    gap: 2.5rem
 
 .footer__title
   margin-bottom: 1rem
