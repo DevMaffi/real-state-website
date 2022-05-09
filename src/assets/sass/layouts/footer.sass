@@ -11,6 +11,11 @@
 .footer__container
   row-gap: 2.5rem
 
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    grid-template-columns: repeat(2, max-content)
+    justify-content: space-between
+
 .footer__logo
   margin-bottom: .75rem
   font:

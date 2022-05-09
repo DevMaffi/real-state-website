@@ -20,6 +20,16 @@
   padding-top: 4rem
   row-gap: 3.5rem
 
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    grid-template-columns: repeat(2, 1fr)
+    padding-top: 2rem
+
+.home__data
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    padding-bottom: 2rem
+
 .home__title,
 .home__value-number
   color: hsl(0, 0%, 100%)
@@ -93,6 +103,10 @@
   // small devices
   +media-lib.breakpoint($br: media-lib.$xxs, $media-feature: 'max-width')
     +plugins.size(240px, 264px)
+
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    align-self: flex-end
 
 .home__img
   display: inline-flex

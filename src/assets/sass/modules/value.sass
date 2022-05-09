@@ -3,10 +3,18 @@
 // placeholders
 @use '../base/placeholders'
 
+// media lib
+@use '../base/media-lib' 
+
 /* VALUE
 
 .value__container
   row-gap: 3rem
+
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    grid-template-columns: repeat(2, 1fr)
+    align-items: center
 
 .value__images
   display: flex

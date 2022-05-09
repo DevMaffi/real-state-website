@@ -11,10 +11,19 @@
 .contact__container
   row-gap: 2rem
 
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    grid-template-columns: repeat(2, 1fr)
+    align-items: center
+
 .contact__images
   display: flex
   justify-content: center
   position: relative
+
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    order: 1
 
 .contact__orbe
   @extend %orbe
@@ -40,6 +49,10 @@
   +media-lib.breakpoint($br: media-lib.$sm)
     grid-template-columns: repeat(2, 192px)
     justify-content: center
+
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    justify-content: initial
 
 .contact__card-box
   padding: 1.25rem .75rem
