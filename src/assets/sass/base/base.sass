@@ -6,6 +6,9 @@
 // plugins
 @use '../plugins/plugins-dir' as plugins
 
+// media lib
+@use 'media-lib'
+
 /* BASE STYLES
 
 *, 
@@ -28,6 +31,14 @@ body
   
   // for theme mode animation
   transition: .3s
+  
+  // high resolution devices
+  +media-lib.breakpoint($br: media-lib.$xxl)
+    zoom: 1.5
+
+  // high resolution devices
+  +media-lib.breakpoint($br: media-lib.$xxxl)
+    zoom: 2
 
 h1, h2, h3
   font-size: var(--font-semi-bold)
