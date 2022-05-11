@@ -3,8 +3,13 @@
 // modules
 import Swiper, { Navigation } from 'swiper'
 
-// @ts-ignore
-import { handleTheme, handleScroll, handleAccordion } from '@modules'
+import {
+  handleTheme,
+  handleScroll,
+  handleAccordion,
+  applyReveal,
+  // @ts-ignore
+} from '@modules'
 
 // styles
 import 'swiper/css'
@@ -41,3 +46,7 @@ new Swiper('.popular__container', {
     nextEl: '.swiper-button-next',
   },
 })
+
+// Scroll reveal
+
+applyReveal()
